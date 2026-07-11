@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HubTex Global Solutions LLC</title>
   <!-- Bootstrap 5 + Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <!-- Google Font (Inter) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* ── RESET & BASE ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       background: #f8fafc;
       color: #1e293b;
       scroll-behavior: smooth;
     }
-    /* ---------- DECORATIONS ---------- */
+
+    /* ── DECORATIVE ELEMENTS ── */
     .bg-pattern {
       position: relative;
       overflow: hidden;
@@ -66,12 +64,9 @@
       pointer-events: none;
       z-index: 0;
     }
-    /* navbar */
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+
+    /* ── NAVBAR ── */
+    .navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
     .navbar-logo-img {
       height: 45px;
       width: auto;
@@ -100,7 +95,8 @@
       border-radius: 40px;
       margin-left: 4px;
     }
-    /* hero */
+
+    /* ── HERO ── */
     .hero-section {
       background: linear-gradient(135deg, #eef4fa 0%, #dce8f2 100%);
       padding: 4rem 0 3rem;
@@ -155,7 +151,8 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    /* cards */
+
+    /* ── CORE CARDS ── */
     .core-card {
       background: white;
       border-radius: 20px;
@@ -196,7 +193,8 @@
       color: white;
       transform: scale(1.05);
     }
-    /* contact items */
+
+    /* ── CONTACT ITEMS ── */
     .contact-item {
       background: white;
       border-radius: 60px;
@@ -216,37 +214,28 @@
       box-shadow: 0 6px 16px rgba(11,42,74,0.06);
       transform: translateX(4px);
     }
-    .contact-item i {
-      color: #0b2a4a;
-      font-size: 1.2rem;
+    .contact-item i { color: #0b2a4a; font-size: 1.2rem; }
+
+    /* ── SECTOR BADGES ── */
+    .sector-badge {
+      background: white;
+      border: 1px solid #dce8f2;
+      border-radius: 40px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 500;
+      color: #1e3a5f;
+      transition: all 0.2s;
+      cursor: default;
     }
-    /* footer */
-    .footer {
-      background: #0b1e2f;
-      color: #cbddee;
-      padding: 2rem 0 1.5rem;
-      margin-top: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #0b2a4a, #4a7a9c, #0b2a4a);
-    }
-    .footer a {
-      color: #b6d0e8;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer a:hover {
+    .sector-badge:hover {
+      background: #0b2a4a;
       color: white;
+      border-color: #0b2a4a;
+      transform: translateY(-2px);
     }
-    /* buttons */
+    .sector-badge i { margin-right: 6px; }
+
+    /* ── BUTTONS ── */
     .btn-outline-primary-custom {
       border: 1px solid #0b2a4a;
       color: #0b2a4a;
@@ -287,56 +276,448 @@
       border-left: 6px solid #0b2a4a;
       padding-left: 1rem;
     }
-    /* sector badges */
-    .sector-badge {
+
+    /* ── STATS / GLOBAL IMPACT ── */
+    .stat-card {
       background: white;
-      border: 1px solid #dce8f2;
-      border-radius: 40px;
-      padding: 0.5rem 1.5rem;
-      font-weight: 500;
-      color: #1e3a5f;
-      transition: all 0.2s;
-      cursor: default;
+      border-radius: 20px;
+      padding: 1.8rem 1.2rem;
+      text-align: center;
+      border: 1px solid rgba(11,42,74,0.06);
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
     }
-    .sector-badge:hover {
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: #0b2a4a20;
+      box-shadow: 0 12px 28px rgba(11,42,74,0.06);
+    }
+    .stat-card .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #0b2a4a;
+      line-height: 1.2;
+    }
+    .stat-card .stat-label {
+      font-size: 0.9rem;
+      color: #4a6a8a;
+      font-weight: 500;
+      margin-top: 0.3rem;
+    }
+    .stat-card i {
+      font-size: 2rem;
+      color: #4a7a9c;
+      opacity: 0.3;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── SOLUTION FEATURE ── */
+    .solution-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(11,42,74,0.05);
+    }
+    .solution-item:last-child { border-bottom: none; }
+    .solution-item .icon-box {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: #e9f0f8;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0b2a4a;
+      font-size: 1.4rem;
+      transition: all 0.2s;
+    }
+    .solution-item:hover .icon-box {
       background: #0b2a4a;
       color: white;
+    }
+    .solution-item h6 {
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: #0b2a4a;
+    }
+    .solution-item p {
+      font-size: 0.9rem;
+      color: #4a6a8a;
+      margin-bottom: 0;
+    }
+
+    /* ── WHY HUBTEX (flex layout) ── */
+    .why-flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 1.5rem;
+    }
+    .why-flex-container .why-heading {
+      flex: 0 0 100%;
+    }
+    .why-flex-container .why-heading h2 {
+      white-space: nowrap;
+    }
+    .why-flex-container .why-cards {
+      display: flex;
+      flex: 1 1 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .why-flex-container .why-cards .why-card {
+      flex: 1 1 200px;
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(11,42,74,0.05);
+      transition: all 0.3s;
+    }
+    .why-flex-container .why-cards .why-card:hover {
+      border-color: #0b2a4a20;
+      box-shadow: 0 8px 24px rgba(11,42,74,0.06);
+      transform: translateY(-3px);
+    }
+    .why-flex-container .why-cards .why-card .icon-circle {
+      width: 52px;
+      height: 52px;
+      background: #0b2a4a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── HARDWARE PHOTO PLACEHOLDER CARDS ── */
+    .hardware-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.2rem;
+      border: 1px solid rgba(11,42,74,0.06);
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+    }
+    .hardware-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(11,42,74,0.06);
+      border-color: #0b2a4a20;
+    }
+    .hardware-card .img-placeholder {
+      width: 100%;
+      height: 120px;
+      background: #e9f0f8;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a7a9c;
+      font-size: 3rem;
+      margin-bottom: 0.8rem;
+      border: 2px dashed #cbddee;
+      transition: all 0.3s;
+      overflow: hidden;
+    }
+    .hardware-card:hover .img-placeholder {
       border-color: #0b2a4a;
-      transform: translateY(-2px);
+      background: #dce8f2;
     }
-    .sector-badge i {
-      margin-right: 6px;
+    .hardware-card .img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
     }
-    /* responsive */
-    @media (max-width: 576px) {
-      .brand-text { font-size: 1.2rem; }
+    .hardware-card h6 {
+      font-weight: 700;
+      color: #0b2a4a;
+      margin-bottom: 0.2rem;
+    }
+    .hardware-card p {
+      font-size: 0.8rem;
+      color: #4a6a8a;
+      margin-bottom: 0;
+    }
+
+    /* ── MANAGEMENT TEAM ── */
+    .team-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(11,42,74,0.05);
+      transition: all 0.3s;
+      height: 100%;
+      text-align: center;
+    }
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(11,42,74,0.06);
+      border-color: #0b2a4a20;
+    }
+    .team-card .team-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #e9f0f8;
+      border: 3px solid #cbddee;
+      margin: 0 auto 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #4a7a9c;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .team-card:hover .team-photo {
+      border-color: #0b2a4a;
+    }
+    .team-card .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .team-card h5 {
+      font-weight: 700;
+      color: #0b2a4a;
+      margin-bottom: 0.2rem;
+    }
+    .team-card .role {
+      font-size: 0.85rem;
+      color: #4a6a8a;
+      font-weight: 500;
+    }
+    .team-card .bio {
+      font-size: 0.85rem;
+      color: #4a6a8a;
+      margin-top: 0.5rem;
+    }
+
+    /* ── ORGANOGRAM ── */
+    .organogram-placeholder {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      border: 2px dashed #cbddee;
+      text-align: center;
+      transition: all 0.3s;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .organogram-placeholder:hover {
+      border-color: #0b2a4a;
+      background: #f5f8fc;
+    }
+    .organogram-placeholder img {
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .organogram-placeholder .placeholder-icon {
+      font-size: 4rem;
+      color: #4a7a9c;
+      opacity: 0.3;
+    }
+    .organogram-placeholder p {
+      color: #4a6a8a;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    /* ── MOBILE APP SCREENSHOT ── (SHOWING FULL PHONE FRAME) ── */
+    .screenshot-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.2rem;
+      border: 1px solid rgba(11,42,74,0.08);
+      transition: all 0.3s;
+      height: 100%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .screenshot-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(11,42,74,0.10);
+      border-color: #0b2a4a;
+    }
+    .screenshot-card .screenshot-wrapper {
+      background: #1a1a2e;
+      border-radius: 28px;
+      padding: 16px 8px 16px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .screenshot-card .screenshot-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 6px;
+      background: #2a2a4a;
+      border-radius: 4px;
+      z-index: 2;
+    }
+    .screenshot-card .screenshot-img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      aspect-ratio: 9 / 19;
+      background: #0a0a1a;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .screenshot-card .screenshot-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .screenshot-card .screenshot-img .fallback-icon {
+      font-size: 3rem;
+      color: #4a7a9c;
+      opacity: 0.4;
+    }
+    .screenshot-card .screenshot-caption {
+      text-align: center;
+      padding: 0.8rem 0.5rem 0.2rem;
+    }
+    .screenshot-card .screenshot-caption h6 {
+      font-weight: 700;
+      color: #0b2a4a;
+      margin-bottom: 0.2rem;
+    }
+    .screenshot-card .screenshot-caption p {
+      font-size: 0.8rem;
+      color: #4a6a8a;
+      margin-bottom: 0;
+    }
+    /* phone home indicator */
+    .screenshot-card .screenshot-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 4px;
+      z-index: 2;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #0b1e2f;
+      color: #cbddee;
+      padding: 2rem 0 1.5rem;
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0b2a4a, #4a7a9c, #0b2a4a);
+    }
+    .footer a {
+      color: #b6d0e8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: white; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
       .hero-section { padding: 2.5rem 0; }
       .navbar-logo-img { height: 35px; }
       .hero-section .floating-icon-1,
       .hero-section .floating-icon-2 { display: none; }
+      .stat-card .stat-number { font-size: 2rem; }
+      .why-flex-container .why-heading h2 {
+        white-space: normal;
+      }
+      .why-flex-container .why-cards .why-card {
+        flex: 1 1 100%;
+      }
+      .team-card .team-photo {
+        width: 100px;
+        height: 100px;
+      }
+      .screenshot-card .screenshot-img {
+        max-width: 200px;
+      }
+      .screenshot-card .screenshot-wrapper {
+        padding: 12px 6px 12px 6px;
+        border-radius: 20px;
+      }
+      .organogram-placeholder { min-height: 150px; }
+      .organogram-placeholder img { max-height: 250px; }
+    }
+    @media (max-width: 576px) {
+      .hardware-card .img-placeholder { height: 100px; }
+      .screenshot-card .screenshot-img {
+        max-width: 160px;
+      }
+      .screenshot-card .screenshot-wrapper {
+        padding: 10px 5px 10px 5px;
+        border-radius: 16px;
+      }
+      .screenshot-card .screenshot-wrapper::before {
+        width: 40px;
+        height: 4px;
+        top: 6px;
+      }
+      .screenshot-card .screenshot-wrapper::after {
+        width: 60px;
+        height: 3px;
+        bottom: 8px;
+      }
+      .organogram-placeholder img { max-height: 180px; }
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
+
+  <!-- ═══ NAVBAR ═══ -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2" style="position:relative;z-index:10;">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <!-- Logo image placeholder: replace src with actual HubTexLogo.png -->
-        <img src="HubTexLogo.png" alt="HubTex Global Solutions LLC" class="navbar-logo-img" onerror="this.style.display='none'">
-        <!-- fallback text if image fails to load -->
+        <img src="HubTexLogo.png" alt="HubTex Global Solutions LLC" class="navbar-logo-img" onerror="this.style.display='none'" />
         <span class="logo-placeholder" id="logoFallback" style="display:none;">
           <span class="big">HubTex</span>
           <span class="sub">GLOBAL SOLUTIONS LLC</span>
         </span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-1 gap-lg-3">
           <li class="nav-item"><a class="nav-link fw-semibold" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#core">Core areas</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#solutions">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#core">Core</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#impact">Impact</a></li>
           <li class="nav-item"><a class="nav-link fw-semibold" href="#contact">Contact</a></li>
           <li class="nav-item"><a class="btn btn-primary-custom btn-sm px-4" href="#contact"><i class="bi bi-send me-1"></i> Reach us</a></li>
         </ul>
@@ -344,9 +725,8 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <section class="hero-section" id="about">
-    <!-- floating decorations -->
     <div class="floating-icon-1"><i class="bi bi-globe2"></i></div>
     <div class="floating-icon-2"><i class="bi bi-boxes"></i></div>
     <div class="container position-relative" style="z-index:1;">
@@ -361,12 +741,12 @@
             <i class="bi bi-geo-alt-fill me-1" style="color:#0b2a4a;"></i> Dallas, Texas · Global impact
           </p>
           <div class="section-divider"></div>
-          <p class="lead" style="max-width: 700px;">
+          <p class="lead" style="max-width:700px;">
             We deliver global digital platforms that serve humanity. By focusing our innovation on education, agriculture, health, logistics, and finance, we build the infrastructure for a smarter, more equitable world.
           </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="#core" class="btn btn-outline-primary-custom"><i class="bi bi-arrow-right-circle"></i> Explore core</a>
-            <a href="#contact" class="btn btn-primary-custom"><i class="bi bi-chat-dots"></i> Get in touch</a>
+            <a href="#solutions" class="btn btn-primary-custom"><i class="bi bi-rocket-takeoff"></i> Our solutions</a>
+            <a href="#contact" class="btn btn-outline-primary-custom"><i class="bi bi-chat-dots"></i> Get in touch</a>
           </div>
         </div>
         <div class="col-lg-5 text-lg-end text-center">
@@ -384,15 +764,102 @@
     </div>
   </section>
 
-  <!-- CORE AREAS -->
+  <!-- ═══ SECTION 1: WHY HUBTEX (FLEX LAYOUT) ═══ -->
+  <section class="py-5 bg-white" id="solutions" style="position:relative;overflow:hidden;">
+    <div class="floating-icon" style="top:15%;right:2%;"><i class="bi bi-stars"></i></div>
+    <div class="container position-relative" style="z-index:1;">
+      <div class="why-flex-container">
+        <div class="why-heading">
+          <span class="badge bg-dark text-white px-3 py-2 rounded-pill mb-2"><i class="bi bi-rocket me-1"></i> Why HubTex</span>
+          <h2 class="display-6 fw-bold" style="color:#0b2a4a;">Building the future, one platform at a time.</h2>
+          <div class="section-divider"></div>
+          <p class="text-secondary-emphasis" style="max-width:600px;">We combine deep technical expertise with a human-centered approach to deliver solutions that create lasting impact across continents.</p>
+        </div>
+        <div class="why-cards">
+          <div class="why-card">
+            <div class="icon-circle"><i class="bi bi-globe-americas"></i></div>
+            <h5 class="fw-bold">Global Reach</h5>
+            <p class="text-secondary-emphasis small">Headquartered in Dallas with a worldwide footprint, we serve clients across North America, Africa, Asia, and Europe.</p>
+          </div>
+          <div class="why-card">
+            <div class="icon-circle"><i class="bi bi-lightbulb"></i></div>
+            <h5 class="fw-bold">Innovation First</h5>
+            <p class="text-secondary-emphasis small">We invest in emerging technologies — AI, IoT, and cloud — to build platforms that are scalable, secure, and future-ready.</p>
+          </div>
+          <div class="why-card">
+            <div class="icon-circle"><i class="bi bi-people"></i></div>
+            <h5 class="fw-bold">Human Impact</h5>
+            <p class="text-secondary-emphasis small">Every solution we build is designed to empower communities, improve livelihoods, and bridge the digital divide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 2: SOLUTIONS OVERVIEW ═══ -->
+  <section class="py-5 bg-light" style="background:#f2f6fc !important;position:relative;overflow:hidden;">
+    <div class="floating-icon" style="bottom:10%;right:3%;"><i class="bi bi-grid"></i></div>
+    <div class="container position-relative" style="z-index:1;">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5">
+          <span class="badge bg-dark text-white px-3 py-2 rounded-pill mb-2"><i class="bi bi-puzzle me-1"></i> What we deliver</span>
+          <h2 class="display-6 fw-bold" style="color:#0b2a4a;">End-to-end<br />technology solutions</h2>
+          <div class="section-divider"></div>
+          <p class="text-secondary-emphasis">From concept to deployment, we provide the full spectrum of ICT services to help organizations thrive in the digital age.</p>
+          <a href="#core" class="btn btn-outline-primary-custom mt-2">Explore our core areas <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="col-lg-7">
+          <div class="bg-white p-4 rounded-4 shadow-sm border" style="border-color:#e2edf7;">
+            <div class="solution-item">
+              <div class="icon-box"><i class="bi bi-code-square"></i></div>
+              <div>
+                <h6>Custom Software Development</h6>
+                <p>Scalable platforms, mobile apps, and enterprise systems built with modern architectures.</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="icon-box"><i class="bi bi-phone"></i></div>
+              <div>
+                <h6>Mobile App Solutions</h6>
+                <p>Native and cross-platform mobile applications for iOS and Android, designed for seamless user experiences.</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="icon-box"><i class="bi bi-person-workspace"></i></div>
+              <div>
+                <h6>Strategic Advisory</h6>
+                <p>Strategic advisory on digital transformation, research and technological innovation.</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="icon-box"><i class="bi bi-hdd-stack"></i></div>
+              <div>
+                <h6>Technological Equipment Supply</h6>
+                <p>Computers, GPS devices and Server hardware for enterprise &amp; institutions.</p>
+              </div>
+            </div>
+            <div class="solution-item">
+              <div class="icon-box"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <h6>Managed Services &amp; Support</h6>
+                <p>Ongoing maintenance, cloud hosting, and 24/7 technical support for peace of mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CORE AREAS (with hardware photo placeholders & mobile app screenshots) ═══ -->
   <section class="py-5 bg-pattern" id="core" style="position:relative;overflow:hidden;">
-    <!-- floating decoration -->
     <div class="floating-icon" style="top:10%;right:5%;"><i class="bi bi-cpu"></i></div>
     <div class="floating-icon" style="bottom:5%;left:3%;"><i class="bi bi-gear"></i></div>
     <div class="container position-relative" style="z-index:1;">
       <div class="row mb-4">
         <div class="col-12">
-          <h2 class="section-title display-6">Core technology areas</h2>
+          <span class="badge bg-dark text-white px-3 py-2 rounded-pill mb-2"><i class="bi bi-grid-3x3-gap-fill me-1"></i> Core areas</span>
+          <h2 class="section-title display-6">Technology expertise</h2>
           <div class="section-divider"></div>
           <p class="text-secondary-emphasis">Driving innovation through focused expertise</p>
         </div>
@@ -414,21 +881,121 @@
             <span class="card-number">02</span>
             <i class="bi bi-person-workspace display-5"></i>
             <h4 class="mt-3 fw-bold">Consultancy Service</h4>
-            <p class="text-secondary-emphasis">Strategic ICT advisory, digital transformation, and technology roadmapping.</p>
+            <p class="text-secondary-emphasis">Strategic advisory on digital transformation, research and technological innovation.</p>
             <span class="badge bg-light text-dark fw-normal border px-3 py-2 mt-2" style="border-color:#d4e0ed;">Global expertise</span>
           </div>
         </div>
-        <!-- ICT Equipment -->
+        <!-- Technological Equipment Supply -->
         <div class="col-md-4">
           <div class="core-card text-center">
             <span class="card-number">03</span>
             <i class="bi bi-hdd-stack display-5"></i>
-            <h4 class="mt-3 fw-bold">ICT Equipment Supply</h4>
-            <p class="text-secondary-emphasis">Hardware, networking, and infrastructure procurement for enterprise &amp; institutions.</p>
+            <h4 class="mt-3 fw-bold">Technological Equipment Supply</h4>
+            <p class="text-secondary-emphasis">Computers, GPS devices and Server hardware for enterprise &amp; institutions.</p>
             <span class="badge bg-light text-dark fw-normal border px-3 py-2 mt-2" style="border-color:#d4e0ed;">End-to-end</span>
           </div>
         </div>
       </div>
+
+      <!-- Hardware Photo Placeholders -->
+      <div class="row mt-4 g-3">
+        <div class="col-12">
+          <h6 class="fw-bold text-uppercase small" style="color:#1f4b70; letter-spacing:1px;"><i class="bi bi-image me-2"></i> Equipment gallery</h6>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="hardware-card">
+            <div class="img-placeholder">
+              <img src="server.png" alt="Server hardware" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-server\'></i>'" />
+              <i class="bi bi-server" style="display:none;"></i>
+            </div>
+            <h6>Server Hardware</h6>
+            <p>Enterprise-grade servers</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="hardware-card">
+            <div class="img-placeholder">
+              <img src="computer.png" alt="Computer" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-pc-display\'></i>'" />
+              <i class="bi bi-pc-display" style="display:none;"></i>
+            </div>
+            <h6>Computers</h6>
+            <p>Desktops &amp; workstations</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="hardware-card">
+            <div class="img-placeholder">
+              <img src="laptop.png" alt="Laptop" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-laptop\'></i>'" />
+              <i class="bi bi-laptop" style="display:none;"></i>
+            </div>
+            <h6>Laptops</h6>
+            <p>Mobile computing</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="hardware-card">
+            <div class="img-placeholder">
+              <img src="gps.png" alt="GPS device" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-geo-alt\'></i>'" />
+              <i class="bi bi-geo-alt" style="display:none;"></i>
+            </div>
+            <h6>GPS Devices</h6>
+            <p>Navigation &amp; tracking</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile App Screenshots - showing full phone frame -->
+      <div class="row mt-4 g-4">
+        <div class="col-12">
+          <h6 class="fw-bold text-uppercase small" style="color:#1f4b70; letter-spacing:1px;"><i class="bi bi-phone me-2"></i> Mobile App — SafeGo</h6>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="screenshot-card">
+            <div class="screenshot-wrapper">
+              <div class="screenshot-img">
+                <img src="mobileApp.png" alt="SafeGo mobile app screenshot" onerror="this.parentElement.innerHTML='<div class=\'fallback-icon\'><i class=\'bi bi-phone\'></i></div>'" />
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <h6>SafeGo — Ride Hailing</h6>
+              <p>Mobile app interface · Destination search</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="screenshot-card">
+            <div class="screenshot-wrapper">
+              <div class="screenshot-img">
+                <img src="ScreenshootOfSafeGo.jpg" alt="SafeGo screenshot" onerror="this.parentElement.innerHTML='<div class=\'fallback-icon\'><i class=\'bi bi-phone\'></i></div>'" />
+              </div>
+            </div>
+            <div class="screenshot-caption">
+              <h6>SafeGo — Navigation</h6>
+              <p>Route selection &amp; favorites</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex align-items-center">
+          <div class="bg-white p-4 rounded-4 border" style="border-color:#e2edf7;width:100%;">
+            <div class="d-flex align-items-center gap-3">
+              <div class="bg-light rounded-circle p-3" style="background:#e9f0f8 !important;">
+                <i class="bi bi-phone text-primary" style="color:#0b2a4a !important;font-size:1.8rem;"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0" style="color:#0b2a4a;">SafeGo App</h6>
+                <p class="small text-secondary-emphasis mb-0">Ride hailing &amp; navigation solution</p>
+              </div>
+            </div>
+            <hr class="my-3" style="border-color:#e2edf7;">
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-light text-dark border px-3 py-2" style="border-color:#d4e0ed;">iOS</span>
+              <span class="badge bg-light text-dark border px-3 py-2" style="border-color:#d4e0ed;">Android</span>
+              <span class="badge bg-light text-dark border px-3 py-2" style="border-color:#d4e0ed;">React Native</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Sectors -->
       <div class="row mt-5 pt-2">
         <div class="col-12">
@@ -447,29 +1014,152 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="py-5 bg-white" id="contact" style="position:relative;overflow:hidden;">
+  <!-- ═══ MANAGEMENT TEAM ═══ -->
+  <section class="py-5 bg-white" id="team" style="position:relative;overflow:hidden;">
+    <div class="floating-icon" style="top:10%;right:5%;"><i class="bi bi-people"></i></div>
+    <div class="container position-relative" style="z-index:1;">
+      <div class="row mb-4">
+        <div class="col-12">
+          <span class="badge bg-dark text-white px-3 py-2 rounded-pill mb-2"><i class="bi bi-person-badge me-1"></i> Leadership</span>
+          <h2 class="section-title display-6">Management Team</h2>
+          <div class="section-divider"></div>
+          <p class="text-secondary-emphasis">Dedicated leaders driving innovation and global impact</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <!-- 1. Habtamu Yeshidinber Tafesse -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="habtamu.png" alt="Habtamu Yeshidinber Tafesse" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-person-circle\'></i>'" />
+              <i class="bi bi-person-circle" style="display:none;"></i>
+            </div>
+            <h5>Habtamu Yeshidinber Tafesse</h5>
+            <div class="role">Chief Executive Officer (CEO)</div>
+            <p class="bio">Visionary leader with 20+ years of experience in ICT, driving global strategy and innovation.</p>
+          </div>
+        </div>
+        <!-- 2. ABC XYZ -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="abc.png" alt="ABC XYZ" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-person-circle\'></i>'" />
+              <i class="bi bi-person-circle" style="display:none;"></i>
+            </div>
+            <h5>ABC XYZ</h5>
+            <div class="role">Head, Global Marketing Davisson</div>
+            <p class="bio">Marketing strategist specializing in global brand expansion and digital outreach.</p>
+          </div>
+        </div>
+        <!-- 3. John Smith -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="john.png" alt="John Smith" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-person-circle\'></i>'" />
+              <i class="bi bi-person-circle" style="display:none;"></i>
+            </div>
+            <h5>John Smith</h5>
+            <div class="role">Digital Transformation Officer</div>
+            <p class="bio">Leading digital strategy, AI integration, and enterprise technology modernization.</p>
+          </div>
+        </div>
+        <!-- 4. Corporate Representative -->
+        <div class="col-md-3 col-sm-6">
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="rep.png" alt="Corporate Representative" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'bi bi-person-circle\'></i>'" />
+              <i class="bi bi-person-circle" style="display:none;"></i>
+            </div>
+            <h5>Corporate Representative</h5>
+            <div class="role">Africa &amp; Middle East</div>
+            <p class="bio">Strategic liaison driving partnerships and business development across Africa and the Middle East.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Organogram -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <h6 class="fw-bold text-uppercase small" style="color:#1f4b70; letter-spacing:1px;"><i class="bi bi-diagram-3 me-2"></i> Organizational Structure</h6>
+          <div class="organogram-placeholder">
+            <img src="organogram.png" alt="Organogram" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-icon\'><i class=\'bi bi-diagram-3\'></i></div><p>Organogram — insert organogram.png</p>'" />
+            <div class="placeholder-icon" style="display:none;"><i class="bi bi-diagram-3"></i></div>
+            <p style="display:none;">Organogram — insert organogram.png</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 3: GLOBAL IMPACT STATS ═══ -->
+  <section class="py-5" id="impact" style="background:#f2f6fc !important;position:relative;overflow:hidden;">
+    <div class="floating-icon" style="top:5%;left:3%;"><i class="bi bi-bar-chart"></i></div>
+    <div class="container position-relative" style="z-index:1;">
+      <div class="row text-center mb-4">
+        <div class="col-12">
+          <span class="badge bg-dark text-white px-3 py-2 rounded-pill mb-2"><i class="bi bi-globe2 me-1"></i> Global impact</span>
+          <h2 class="display-6 fw-bold" style="color:#0b2a4a;">Making a difference worldwide</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-secondary-emphasis" style="max-width:600px;margin:0 auto;">Our work spans continents, empowering communities and organizations with technology that drives real change.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <i class="bi bi-people"></i>
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Countries Served</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <i class="bi bi-building"></i>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Enterprise Clients</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <i class="bi bi-code-slash"></i>
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <i class="bi bi-star"></i>
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="py-5" id="contact" style="background:linear-gradient(135deg,#f0f5fc 0%,#e3edf7 100%);position:relative;overflow:hidden;">
     <div class="floating-icon" style="top:20%;right:3%;"><i class="bi bi-envelope"></i></div>
     <div class="container position-relative" style="z-index:1;">
       <div class="row g-5">
         <div class="col-lg-6">
+          <span class="badge bg-dark text-white px-3 py-2 rounded-pill mb-2"><i class="bi bi-chat-dots me-1"></i> Get in touch</span>
           <h2 class="section-title display-6">Connect with HubTex</h2>
           <div class="section-divider"></div>
           <p class="text-secondary-emphasis" style="max-width:500px;">
-            We’re headquartered in Dallas, Texas — but our reach is global. 
+            We're headquartered in Dallas, Texas — but our reach is global.
             Reach out for partnerships, inquiries, or technology solutions.
           </p>
           <div class="mt-4 d-flex flex-column gap-3">
             <div class="contact-item">
-              <i class="bi bi-telephone-fill"></i> 
+              <i class="bi bi-telephone-fill"></i>
               <span><strong>Phone:</strong> +1 (630) 562-6732</span>
             </div>
             <div class="contact-item">
-              <i class="bi bi-envelope-fill"></i> 
+              <i class="bi bi-envelope-fill"></i>
               <span><strong>Email:</strong> hubtexglobal@gmail.com</span>
             </div>
             <div class="contact-item">
-              <i class="bi bi-geo-alt-fill"></i> 
+              <i class="bi bi-geo-alt-fill"></i>
               <span><strong>Dallas, Texas</strong> · USA</span>
             </div>
           </div>
@@ -478,18 +1168,19 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="bg-light p-4 rounded-4 h-100 d-flex flex-column justify-content-center" style="background:linear-gradient(135deg,#f0f5fc 0%,#e3edf7 100%) !important;border:1px solid #d4e3f0;">
+          <div class="bg-white p-4 rounded-4 h-100 d-flex flex-column justify-content-center shadow-sm" style="border:1px solid #d4e3f0;">
             <div class="mb-3">
               <span class="badge bg-dark text-white px-4 py-2 rounded-pill"><i class="bi bi-building me-1"></i> Headquarters</span>
             </div>
             <h5 class="fw-bold"><i class="bi bi-building me-2" style="color:#0b2a4a;"></i> HubTex Global Solutions LLC</h5>
             <p class="mb-1"><i class="bi bi-pin-map me-1"></i> Dallas, Texas, USA</p>
             <p class="mb-2"><i class="bi bi-globe-americas me-1"></i> Global delivery · ICT solutions</p>
-            <hr class="my-3" style="border-color:#cdddec;">
+            <hr class="my-3" style="border-color:#cdddec;" />
             <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-white text-dark border px-3 py-2" style="border-color:#b6d0e8;">Platforms</span>
-              <span class="badge bg-white text-dark border px-3 py-2" style="border-color:#b6d0e8;">Digital transformation</span>
-              <span class="badge bg-white text-dark border px-3 py-2" style="border-color:#b6d0e8;">Consulting</span>
+              <span class="badge bg-light text-dark border px-3 py-2" style="border-color:#b6d0e8;">Platforms</span>
+              <span class="badge bg-light text-dark border px-3 py-2" style="border-color:#b6d0e8;">Digital transformation</span>
+              <span class="badge bg-light text-dark border px-3 py-2" style="border-color:#b6d0e8;">Consulting</span>
+              <span class="badge bg-light text-dark border px-3 py-2" style="border-color:#b6d0e8;">Hardware</span>
             </div>
           </div>
         </div>
@@ -497,7 +1188,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
     <div class="container position-relative" style="z-index:1;">
       <div class="row align-items-center">
@@ -521,7 +1212,7 @@
           </div>
         </div>
       </div>
-      <hr class="mt-3 mb-2" style="border-color:#2d4b68;">
+      <hr class="mt-3 mb-2" style="border-color:#2d4b68;" />
       <div class="text-center small" style="opacity:0.5;">
         <i class="bi bi-code-slash me-1"></i> Built with Bootstrap · global vision
       </div>
@@ -529,10 +1220,11 @@
   </footer>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
   <script>
     (function() {
-      // smooth anchor scroll
+      // Smooth anchor scroll
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
@@ -545,7 +1237,7 @@
         });
       });
 
-      // fallback: if logo image fails, show text placeholder
+      // Logo fallback
       const logoImg = document.querySelector('.navbar-logo-img');
       const fallback = document.getElementById('logoFallback');
       if (logoImg) {
@@ -555,6 +1247,24 @@
         });
         if (fallback) fallback.style.display = 'none';
       }
+
+      // Team photo fallbacks
+      document.querySelectorAll('.team-photo img').forEach(img => {
+        img.addEventListener('error', function() {
+          this.style.display = 'none';
+          const icon = this.parentElement.querySelector('i');
+          if (icon) icon.style.display = 'flex';
+        });
+      });
+
+      // Hardware image fallbacks
+      document.querySelectorAll('.img-placeholder img').forEach(img => {
+        img.addEventListener('error', function() {
+          this.style.display = 'none';
+          const icon = this.parentElement.querySelector('i');
+          if (icon) icon.style.display = 'flex';
+        });
+      });
     })();
   </script>
 </body>
